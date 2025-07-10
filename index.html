@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expense Tracker App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="common/header/header.css" />
+  <style>
+    html, body {
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #f0f4ff 0%, #e0e7ff 100%);
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      flex-shrink: 0;
+    }
+    main {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+    .button-row {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .main-btn {
+      width: 160px;
+      padding: 0.9rem 0;
+      background: linear-gradient(90deg, #6366f1 0%, #4f46e5 100%);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.10);
+      text-align: center;
+      border: none;
+      display: inline-block;
+    }
+    .main-btn:hover {
+      background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+    }
+    h2 {
+      color: #4f46e5;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Expense Tracker</h1>
+  </div>
+  <main>
+    <h2>Welcome to Expense Tracker</h2>
+    <div class="button-row">
+      <a href="/signup" class="main-btn">Sign Up</a>
+      <a href="/login" class="main-btn">Login</a>
+    </div>
+  </main>
+</body>
+</html>
