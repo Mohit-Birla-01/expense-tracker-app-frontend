@@ -24,8 +24,13 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     const data = await res.json();
 
     if (res.ok) {
+      // Store user data without token requirement
+      localStorage.setItem('userName', data.user?.name || email.split('@')[0]);
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('isLoggedIn', 'true');
+
       message.style.color = "green";
-      message.textContent = "Login successful!";
+      message.textContent = "Login successful! Redirecting...";
       setTimeout(() => window.location.href = "/home", 2000);
     } else {
       message.style.color = "red";
